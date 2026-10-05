@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: white;
+    line-height: 1.6;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
+.links {
+    list-style: none;
+
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: #555;
+}
+
+.lnks a:hover {
+    color: black;
+}
+
+
+/* =========================
+   6. HERO SECTION
+   ========================= */
+
+.home1 {
+    min-height: 80vh;
+    background: #f3f5f8;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.sub-heading,
+.label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.home1 h2 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.home1 p {
+    max-width: 600px;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+
+    border: 3px solid #222;
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 18px;
+    padding: 12px 20px;
+
+    background: #222;
+    color: white;
+
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #555;
+}
+
+.theme-1 {
+    padding: 70px 0;
+}
+
+.theme-2 {
+    background: #f3f5f8;
+}
+
+.theme-1 h2 {
+    margin: 8px 0 30px;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 40px;
+}
+
+.box {
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    background: white;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+
+.form {
+    max-width: 650px;
+}
+
+.form label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #bbb;
+    border-radius: 5px;
+
+}
+
+.check {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 800px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+
+        padding: 15px 0;
+
+        gap: 10px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .home1 {
+        min-height: auto;
+
+        padding: 70px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        width: 170px;
+        height: 170px;
+    }
+}
